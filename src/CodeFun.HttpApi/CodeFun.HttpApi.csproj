@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>CodeFun</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CodeFun.Application.Contracts\CodeFun.Application.Contracts.csproj" />
+    <ProjectReference Include="..\CodeFun.AspNetCore.NLog.CouchBase\CodeFun.AspNetCore.NLog.CouchBase.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>

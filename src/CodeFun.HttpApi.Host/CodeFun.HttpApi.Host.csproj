@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>CodeFun</RootNamespace>
+    <PreserveCompilationReferences>true</PreserveCompilationReferences>
+    <UserSecretsId>CodeFun-4681b4fd-151f-4221-84a4-929d86723e4c</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NLog.Targets.Seq" Version="2.0.0" />
+    <PackageReference Include="Volo.Abp.Autofac" Version="4.3.0" />
+    <PackageReference Include="Volo.Abp.BackgroundWorkers" Version="4.3.0" />
+    <PackageReference Include="Volo.Abp.Swashbuckle" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CodeFun.Application\CodeFun.Application.csproj" />
+    <ProjectReference Include="..\CodeFun.HttpApi\CodeFun.HttpApi.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <Content Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
+  </ItemGroup>
+
+</Project>
